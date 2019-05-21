@@ -1,0 +1,93 @@
+header {
+    // background-color: @header-bg;
+    background         : #4e54c8;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #4e54c8, @header-bg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #4e54c8, @header-bg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding-bottom: 6rem;
+
+    .header-top {
+        .flexdisplay(row);
+        align-items    : center;
+        justify-content: space-between;
+        padding-top    : 6rem;
+        padding-bottom : 4.5rem;
+    }
+
+    .left {
+        .flexdisplay(row);
+        align-items: center;
+
+        .brief {
+            .hstyles(3.8rem, 0px, 500);
+            background-color: @button-bg;
+            border-radius   : 1.5rem;
+            padding         : .5rem;
+            transform    : rotate(-45deg);
+
+            &:hover {
+                cursor    : pointer;
+                box-shadow: 0 0 .5rem @gold;
+            }
+        }
+
+        .full {
+            .hstyles(3.0rem, 0px, 500);
+            margin-left: 1rem;
+        }
+
+    }
+
+    .right {
+        .flexdisplay(row);
+        align-items: center;
+
+        .headernav {
+            .pStyles(1.5, 1.6rem, 400);
+            margin-right: 4rem;
+
+            a {
+                .astyles(3.5rem);
+                
+                &:hover {
+                    color: @ahover;
+                }
+            }
+        }
+    }
+
+    .header-bottom {
+        .flexdisplay(row);
+        align-items    : center;
+        justify-content: space-between;
+
+        @media @mobile {
+        .flexdisplay(column);
+        }
+
+        .mockup {
+            width: 55%;
+
+            @media @mobile {
+                width: 100%;
+            }
+        }
+
+        .intro-text {
+            width: 40%;
+
+            @media @mobile {
+                width: 100%;
+            }
+
+            .buttons {
+                .flexdisplay(row);
+                width          : 80%;
+                align-items    : center;
+                justify-content: space-between;
+            }
+        }
+    }
+}
