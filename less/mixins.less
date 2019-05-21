@@ -1,0 +1,41 @@
+// component margins
+.componentMargin() {
+    max-width: 1100px;
+    width    : 100%;
+    margin   : 0 auto;
+
+    @media @tablet {
+        max-width: 600px;
+    }
+
+    @media @tabletmini {
+        max-width: 500px;
+    }
+
+    @media @mobile {
+        max-width: 450px;
+    }
+}
+// flex display
+.flexdisplay(@Direction) {
+    display       : flex;
+    flex-direction: @Direction;
+}
+// header styles
+.hstyles(@fontsize, @paddingbottom, @fontweight) {
+    font-size     : @fontsize;
+    padding-bottom: @paddingbottom;
+    font-weight   : @fontweight;
+}
+// paragraph styles
+.pStyles(@lineheight, @fontsize, @fontweight) {
+    line-height: @lineheight;
+    font-size  : @fontsize;
+    font-weight: @fontweight;
+}
+// link styles
+.astyles(@paddingleft) {
+    color          : @font-color;
+    text-decoration: none;
+    padding-left   : @paddingleft;
+}
