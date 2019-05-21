@@ -286,7 +286,7 @@ a {
 }
 @media (max-width: 500px) {
   .container {
-    max-width: 450px;
+    max-width: 350px;
   }
 }
 .alt-color {
@@ -321,7 +321,7 @@ a {
 }
 @media (max-width: 500px) {
   .fixed-header {
-    max-width: 450px;
+    max-width: 350px;
   }
 }
 .btn-1 {
@@ -350,7 +350,7 @@ a {
   cursor: pointer;
   background-color: #0F69CC;
 }
-.hidden {
+.mobile-hidden {
   display: none;
 }
 header {
@@ -369,6 +369,11 @@ header .header-top {
   justify-content: space-between;
   padding-top: 6rem;
   padding-bottom: 4.5rem;
+}
+@media (max-width: 500px) {
+  header .header-top {
+    padding-top: 3.5rem;
+  }
 }
 header .left {
   display: flex;
@@ -439,6 +444,10 @@ header .header-bottom .intro-text {
 @media (max-width: 500px) {
   header .header-bottom .intro-text {
     width: 100%;
+    text-align: center;
+  }
+  header .header-bottom .intro-text h2 {
+    margin-bottom: 1.5rem;
   }
 }
 header .header-bottom .intro-text .buttons {
@@ -447,6 +456,12 @@ header .header-bottom .intro-text .buttons {
   width: 80%;
   align-items: center;
   justify-content: space-between;
+}
+@media (max-width: 500px) {
+  header .header-bottom .intro-text .buttons {
+    width: 100%;
+    justify-content: center;
+  }
 }
 footer {
   background-color: #17285D;
@@ -465,6 +480,12 @@ footer .footer {
   align-items: center;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  footer .footer {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
 footer .footer .copyright-text {
   width: 75%;
   text-align: center;
@@ -479,6 +500,13 @@ footer .footer .icons {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+@media (max-width: 500px) {
+  footer .footer .icons {
+    width: 90%;
+    justify-content: center;
+    margin-top: 2rem;
+  }
 }
 footer .footer .icons li {
   padding-right: 2rem;
@@ -532,7 +560,7 @@ footer a:hover {
 }
 @media (max-width: 500px) {
   #howitworks {
-    max-width: 450px;
+    max-width: 350px;
   }
 }
 #howitworks .hiw-box {
@@ -540,11 +568,22 @@ footer a:hover {
   flex-direction: row;
   padding-bottom: 2rem;
 }
+@media (max-width: 500px) {
+  #howitworks .hiw-box {
+    display: flex;
+    flex-direction: column;
+  }
+}
 #howitworks .hiw-box .story-box {
   display: flex;
   flex-direction: column;
   width: 30%;
   justify-content: space-between;
+}
+@media (max-width: 500px) {
+  #howitworks .hiw-box .story-box {
+    width: 100%;
+  }
 }
 #howitworks .hiw-box .story-box .story {
   background-color: rgba(255, 255, 255, 0.5);
@@ -568,6 +607,12 @@ footer a:hover {
   padding: 0 2rem;
   justify-content: center;
 }
+@media (max-width: 500px) {
+  #howitworks .hiw-box .mid-mockup {
+    width: 100%;
+    padding: 2rem 0;
+  }
+}
 #team {
   padding: 3rem 0;
 }
@@ -581,12 +626,25 @@ footer a:hover {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  #team .team-box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+}
 #team .team-box .team-member {
   width: 30%;
   border-radius: 1.5rem;
   margin-bottom: 3rem;
   background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 1rem 1rem 2rem rgba(192, 192, 192, 0.5);
+}
+@media (max-width: 500px) {
+  #team .team-box .team-member {
+    width: 80%;
+  }
 }
 #team .team-box .team-member:hover {
   cursor: pointer;
