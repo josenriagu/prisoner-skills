@@ -176,5 +176,7 @@ a {
 
 // define hidden class style
 .mobile-hidden {
-    display: none;
+    @media @mobile {
+        display: none;
+    }
 }

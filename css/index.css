@@ -350,8 +350,10 @@ a {
   cursor: pointer;
   background-color: #0F69CC;
 }
-.mobile-hidden {
-  display: none;
+@media (max-width: 500px) {
+  .mobile-hidden {
+    display: none;
+  }
 }
 header {
   background: #4e54c8;
