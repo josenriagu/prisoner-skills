@@ -14,12 +14,15 @@ footer {
         align-items    : center;
         justify-content: space-between;
 
+        // associated media queries
+        @media @mobile {
+            .flexdisplay(column-reverse);
+        }
+
         .copyright-text {
             width              : 75%;
             text-align         : center;
-            // padding-top     : 2rem;
-            margin-top             : 1.5rem;
-            // background-color: red;
+            margin-top         : 1.5rem;
 
             span {
                 color    : @span;
@@ -30,8 +33,14 @@ footer {
         .icons {
             width: 25%;
             .flexdisplay(row);
-            flex-wrap          : wrap;
-            // background-color: green;
+            flex-wrap: wrap;
+
+            // associated media queries
+            @media @mobile {
+                width          : 90%;
+                justify-content: center;
+                margin-top     : 2rem;
+            }
 
             li {
                 padding-right: 2rem;
