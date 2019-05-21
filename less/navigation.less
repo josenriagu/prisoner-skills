@@ -14,6 +14,11 @@ header {
         justify-content: space-between;
         padding-top    : 6rem;
         padding-bottom : 4.5rem;
+
+        // associated media queries
+        @media @mobile {
+            padding-top: 3.5rem;
+        }
     }
 
     .left {
@@ -25,7 +30,7 @@ header {
             background-color: @button-bg;
             border-radius   : 1.5rem;
             padding         : .5rem;
-            transform    : rotate(-45deg);
+            transform       : rotate(-45deg);
 
             &:hover {
                 cursor    : pointer;
@@ -50,7 +55,7 @@ header {
 
             a {
                 .astyles(3.5rem);
-                
+
                 &:hover {
                     color: @ahover;
                 }
@@ -63,13 +68,15 @@ header {
         align-items    : center;
         justify-content: space-between;
 
+        // associated media queries
         @media @mobile {
-        .flexdisplay(column);
+            .flexdisplay(column);
         }
 
         .mockup {
             width: 55%;
 
+            // associated media queries
             @media @mobile {
                 width: 100%;
             }
@@ -78,8 +85,14 @@ header {
         .intro-text {
             width: 40%;
 
+            // associated media queries
             @media @mobile {
-                width: 100%;
+                width     : 100%;
+                text-align: center;
+
+                h2 {
+                    margin-bottom: 1.5rem;
+                }
             }
 
             .buttons {
@@ -87,6 +100,12 @@ header {
                 width          : 80%;
                 align-items    : center;
                 justify-content: space-between;
+
+                // associated media queries
+                @media @mobile {
+                    width          : 100%;
+                    justify-content: center;
+                }
             }
         }
     }
