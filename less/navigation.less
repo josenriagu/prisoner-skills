@@ -109,4 +109,32 @@ header {
             }
         }
     }
+
+    .menu-mobile {
+        .drawer-overlay {
+            .overlay(0.7, 0, 0, 0, 0);
+        }
+        .mobile-nav {
+            .flexdisplay(column);
+            .overlay(1, 0, 0, 0, 0);
+            background-color: @theme-bg;
+            height: 100%;
+            width: 80%;
+            padding-left: 2rem;
+            justify-content: right;
+        }
+        nav {
+            .flexdisplay(column);
+            font-size: 3rem;
+            margin: 3rem 0 2rem 0;
+
+            a {
+                padding: 1rem 0;
+            }
+        }
+        .nav-btn {
+            max-width: 90%;
+            margin: 0 auto;
+        }
+    }
 }
