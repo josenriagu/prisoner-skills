@@ -39,3 +39,16 @@
     text-decoration: none;
     padding-left   : @paddingleft;
 }
+// overlay style
+.overlay(@opacity, @top, @right, @bottom, @left) {
+    background-color: @shark;
+    opacity: @opacity;
+    position: absolute;
+    z-index: 1;
+    top:@top;
+    right:@right;
+    bottom:@bottom;
+    left:@left;
+    height:100%;
+    width:100%;
+}
