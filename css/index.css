@@ -703,7 +703,9 @@ footer a:hover {
 }
 #team .team-box .team-member h3 {
   padding: 1.5rem;
+  text-align: center;
 }
 #team .team-box .team-member p {
   padding: 1.5rem;
+  text-align: center;
 }
