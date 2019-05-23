@@ -20,9 +20,9 @@ footer {
         }
 
         .copyright-text {
-            width              : 75%;
-            text-align         : center;
-            margin-top         : 1.5rem;
+            width     : 75%;
+            text-align: center;
+            margin-top: 1.5rem;
 
             span {
                 color    : @span;
@@ -44,6 +44,10 @@ footer {
 
             li {
                 padding-right: 2rem;
+
+                @media @tablet, @tabletmini {
+                    padding-right: 1rem;
+                }
             }
 
             .fab {
