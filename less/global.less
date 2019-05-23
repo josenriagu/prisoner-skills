@@ -20,12 +20,33 @@ strong {
     color      : @theme-blue;
 }
 
+// override default placeholder fonts
+::-webkit-input-placeholder {
+    font-family: 'Roboto', sans-serif;
+}
+
+:-moz-placeholder {
+    font-family: 'Roboto', sans-serif;
+}
+
+::-moz-placeholder {
+    font-family: 'Roboto', sans-serif;
+}
+
+:-ms-input-placeholder {
+    font-family: 'Roboto', sans-serif;
+}
+
 // define special font family (if any) for heading levels
 h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+button,
+input,
+select,
+textarea {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -171,6 +192,27 @@ a {
     &:hover {
         cursor          : pointer;
         background-color: @button-bg;
+    }
+}
+
+// define button 3 style
+.btn-3 {
+    .hstyles(1.7rem, 0px, 500);
+    border          : .2rem solid @button-bg;
+    background-color: @button-bg;
+    border-radius   : 1.5rem;
+    padding         : 1rem 1rem;
+    box-shadow      : 1rem 1rem 2rem fadeout(@silver, 50%);
+
+    &:hover {
+        cursor          : pointer;
+        background-color: darken(@button-bg, 15%);
+        color           : @gold;
+        box-shadow      : 1rem 1rem 2rem @silver;
+    }
+
+    &:focus {
+        outline: none;
     }
 }
 
