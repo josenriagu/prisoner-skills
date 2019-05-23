@@ -12,8 +12,9 @@ header {
         .flexdisplay(row);
         align-items    : center;
         justify-content: space-between;
+        // padding: 6rem 1.5rem 4rem 1.5rem;        
         padding-top    : 6rem;
-        padding-bottom : 4.5rem;
+        padding-bottom : 4rem;
 
         // associated media queries
         @media @mobile {
@@ -30,7 +31,7 @@ header {
             background-color: @button-bg;
             border-radius   : 1.5rem;
             padding         : .5rem;
-            transform       : rotate(-45deg);
+            // transform       : rotate(-45deg);
 
             &:hover {
                 cursor    : pointer;
@@ -69,7 +70,7 @@ header {
         justify-content: space-between;
 
         // associated media queries
-        @media @mobile {
+        @media @mobile, @tablet, @tabletmini {
             .flexdisplay(column);
         }
 
@@ -77,7 +78,7 @@ header {
             width: 55%;
 
             // associated media queries
-            @media @mobile {
+            @media @mobile, @tablet, @tabletmini {
                 width: 100%;
             }
         }
@@ -86,8 +87,8 @@ header {
             width: 40%;
 
             // associated media queries
-            @media @mobile {
-                width     : 100%;
+            @media @mobile, @tablet, @tabletmini  {
+                width     : 80%;
                 text-align: center;
 
                 h2 {
@@ -98,19 +99,20 @@ header {
             .buttons {
                 .flexdisplay(row);
                 width          : 80%;
+                margin: 0 auto;
                 align-items    : center;
                 justify-content: space-between;
 
                 // associated media queries
-                @media @mobile {
-                    width          : 100%;
-                    justify-content: center;
+                @media @mobile, @tablet, @tabletmini  {
+                    width          : 60%;
                 }
             }
         }
     }
 
     .menu-mobile {
+        display: none;
         .drawer-overlay {
             .overlay(0.7, 0, 0, 0, 0);
         }
