@@ -286,23 +286,23 @@ a {
   padding-left: 0rem;
 }
 .container {
-  max-width: 78vw;
+  max-width: 1060px;
   width: 100%;
   margin: 0 auto;
 }
 @media (max-width: 800px) {
   .container {
-    max-width: 95vw;
+    max-width: 600px;
   }
 }
 @media (max-width: 600px) {
   .container {
-    max-width: 95vw;
+    max-width: 500px;
   }
 }
 @media (max-width: 500px) {
   .container {
-    max-width: 95vw;
+    max-width: 390px;
   }
 }
 .alt-color {
@@ -317,7 +317,7 @@ a {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .fixed-header {
-  max-width: 78vw;
+  max-width: 1060px;
   width: 100%;
   margin: 0 auto;
   background-color: red;
@@ -327,17 +327,17 @@ a {
 }
 @media (max-width: 800px) {
   .fixed-header {
-    max-width: 95vw;
+    max-width: 600px;
   }
 }
 @media (max-width: 600px) {
   .fixed-header {
-    max-width: 95vw;
+    max-width: 500px;
   }
 }
 @media (max-width: 500px) {
   .fixed-header {
-    max-width: 95vw;
+    max-width: 390px;
   }
 }
 .btn-1 {
