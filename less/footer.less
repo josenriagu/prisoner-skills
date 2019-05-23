@@ -65,3 +65,25 @@ footer {
         }
     }
 }
+
+.scroll-top {
+    .pStyles(1.5, 4rem, 600);
+    color: @theme-bg;
+    background-color: fade(@button-bg, 50%);
+    width: fit-content;
+    border-radius: 8rem;
+    padding: 0 1.25rem;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 99;
+    border: none;
+    outline: none;
+    
+    &:hover{
+        cursor: pointer;
+        box-shadow: 0rem 0rem .5rem @gold;
+        // box-shadow      : 1rem 1rem 2rem @silver;
+
+    }
+}

@@ -62,6 +62,14 @@ header {
                 }
             }
         }
+
+        .fas {
+            display: none;
+
+            @media @mobile, @tablet, @tabletmini {
+                display: block;
+            }
+        }
     }
 
     .header-bottom {
@@ -114,11 +122,12 @@ header {
     .menu-mobile {
         display: none;
         .drawer-overlay {
-            .overlay(0.7, 0, 0, 0, 0);
+            .overlay(0.7, 0, 0, 0);
         }
+
         .mobile-nav {
             .flexdisplay(column);
-            .overlay(1, 0, 0, 0, 0);
+            .overlay(1, 0, 0, 0);
             background-color: @theme-bg;
             height: 100%;
             width: 80%;

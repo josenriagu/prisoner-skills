@@ -11,3 +11,18 @@ const features = [{ src: "/img/icons/feature_1.png", alt: "feature-1", heading2:
 
 // get parent container
 const featuresbox = document.querySelector('.features-box');
+
+// get anchor tags
+const anchor_tag = Array.from(document.querySelectorAll('nav a'));
+
+// get scrolltop button
+const scroll_top = document.querySelector('.scroll-top');
+
+// get mobile menu button
+const menu_btn = document.querySelector('.fas');
+
+// get mobile menu
+const menu = document.querySelector('.menu-mobile');
+
+// get overlay
+const overlay = document.querySelector('.drawer-overlay');

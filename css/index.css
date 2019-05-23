@@ -385,7 +385,7 @@ a {
 .btn-3:focus {
   outline: none;
 }
-@media (max-width: 500px) {
+@media (max-width: 500px), (max-width: 800px), (max-width: 600px) {
   .mobile-hidden {
     display: none;
   }
@@ -454,6 +454,14 @@ header .right .headernav a {
 header .right .headernav a:hover {
   color: #f4b643;
 }
+header .right .fas {
+  display: none;
+}
+@media (max-width: 500px), (max-width: 800px), (max-width: 600px) {
+  header .right .fas {
+    display: block;
+  }
+}
 header .header-bottom {
   display: flex;
   flex-direction: row;
@@ -503,28 +511,24 @@ header .menu-mobile {
   display: none;
 }
 header .menu-mobile .drawer-overlay {
-  background-color: #212529;
-  opacity: 0.7;
-  position: absolute;
-  z-index: 1;
+  background-color: rgba(33, 37, 41, 0.4);
+  position: fixed;
+  z-index: 999;
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0;
   height: 100%;
   width: 100%;
 }
 header .menu-mobile .mobile-nav {
   display: flex;
   flex-direction: column;
-  background-color: #212529;
-  opacity: 1;
-  position: absolute;
-  z-index: 1;
+  background-color: rgba(33, 37, 41, 0.4);
+  position: fixed;
+  z-index: 999;
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0;
   width: 100%;
   background-color: #17285D;
   height: 100%;
@@ -603,6 +607,26 @@ footer .footer .icons .fab:hover {
 }
 footer a:hover {
   color: #f4b643;
+}
+.scroll-top {
+  line-height: 1.5;
+  font-size: 4rem;
+  font-weight: 600;
+  color: #17285D;
+  background-color: rgba(15, 105, 204, 0.5);
+  width: fit-content;
+  border-radius: 8rem;
+  padding: 0 1.25rem;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 99;
+  border: none;
+  outline: none;
+}
+.scroll-top:hover {
+  cursor: pointer;
+  box-shadow: 0rem 0rem 0.5rem #f4b643;
 }
 .section-title {
   padding: 3rem 0rem;

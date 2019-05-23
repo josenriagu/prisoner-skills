@@ -97,3 +97,38 @@ class TeamBuilder {
 doTeamBuild();
 
 // ********************************************************************************************************************
+
+// Set click to scroll events on anchor tags
+anchor_tag.map((anchor, index) => {
+    anchor.addEventListener('click', (event) => {
+        event.preventDefault();
+        const navscroll = [0, 660, 1050, 1530, 2740];
+        window.scrollTo(0, navscroll[index])
+    })
+})
+
+// Show scroll to top button when scroll to 30px
+window.addEventListener('scroll', () => scroll());
+
+// Define scroll behaviour
+const scroll = () => {
+  if (window.scrollY > 400 || document.documentElement.scrollY > 400) {
+    scroll_top.style.display = 'block';
+  } else {
+    scroll_top.style.display = 'none';
+  }
+}
+
+// Add click event listener and scroll to top when clicked
+scroll_top.addEventListener('click', () => window.scrollTo(0, 0))
+
+
+// Add click event listener to menu button
+menu_btn.addEventListener ('click', () => {
+    menu.style.display = 'block';
+})
+
+// Add click event listener to overlay
+overlay.addEventListener ('click', () => {
+    menu.style.display ='none';
+})
