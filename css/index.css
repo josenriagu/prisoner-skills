@@ -141,11 +141,27 @@ strong {
   font-weight: 600;
   color: #0F69CC;
 }
+::-webkit-input-placeholder {
+  font-family: 'Roboto', sans-serif;
+}
+:-moz-placeholder {
+  font-family: 'Roboto', sans-serif;
+}
+::-moz-placeholder {
+  font-family: 'Roboto', sans-serif;
+}
+:-ms-input-placeholder {
+  font-family: 'Roboto', sans-serif;
+}
 h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+button,
+input,
+select,
+textarea {
   font-family: 'Roboto', sans-serif;
 }
 h1 {
@@ -270,23 +286,23 @@ a {
   padding-left: 0rem;
 }
 .container {
-  max-width: 1100px;
+  max-width: 78vw;
   width: 100%;
   margin: 0 auto;
 }
 @media (max-width: 800px) {
   .container {
-    max-width: 600px;
+    max-width: 95vw;
   }
 }
 @media (max-width: 600px) {
   .container {
-    max-width: 500px;
+    max-width: 95vw;
   }
 }
 @media (max-width: 500px) {
   .container {
-    max-width: 350px;
+    max-width: 95vw;
   }
 }
 .alt-color {
@@ -301,7 +317,7 @@ a {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .fixed-header {
-  max-width: 1100px;
+  max-width: 78vw;
   width: 100%;
   margin: 0 auto;
   background-color: red;
@@ -311,17 +327,17 @@ a {
 }
 @media (max-width: 800px) {
   .fixed-header {
-    max-width: 600px;
+    max-width: 95vw;
   }
 }
 @media (max-width: 600px) {
   .fixed-header {
-    max-width: 500px;
+    max-width: 95vw;
   }
 }
 @media (max-width: 500px) {
   .fixed-header {
-    max-width: 350px;
+    max-width: 95vw;
   }
 }
 .btn-1 {
@@ -350,6 +366,25 @@ a {
   cursor: pointer;
   background-color: #0F69CC;
 }
+.btn-3 {
+  font-size: 1.7rem;
+  padding-bottom: 0px;
+  font-weight: 500;
+  border: 0.2rem solid #0F69CC;
+  background-color: #0F69CC;
+  border-radius: 1.5rem;
+  padding: 1rem 1rem;
+  box-shadow: 1rem 1rem 2rem rgba(192, 192, 192, 0.5);
+}
+.btn-3:hover {
+  cursor: pointer;
+  background-color: #0a4485;
+  color: #f4b643;
+  box-shadow: 1rem 1rem 2rem #C0C0C0;
+}
+.btn-3:focus {
+  outline: none;
+}
 @media (max-width: 500px) {
   .mobile-hidden {
     display: none;
@@ -370,7 +405,7 @@ header .header-top {
   align-items: center;
   justify-content: space-between;
   padding-top: 6rem;
-  padding-bottom: 4.5rem;
+  padding-bottom: 4rem;
 }
 @media (max-width: 500px) {
   header .header-top {
@@ -389,7 +424,6 @@ header .left .brief {
   background-color: #0F69CC;
   border-radius: 1.5rem;
   padding: 0.5rem;
-  transform: rotate(-45deg);
 }
 header .left .brief:hover {
   cursor: pointer;
@@ -426,7 +460,7 @@ header .header-bottom {
   align-items: center;
   justify-content: space-between;
 }
-@media (max-width: 500px) {
+@media (max-width: 500px), (max-width: 800px), (max-width: 600px) {
   header .header-bottom {
     display: flex;
     flex-direction: column;
@@ -435,7 +469,7 @@ header .header-bottom {
 header .header-bottom .mockup {
   width: 55%;
 }
-@media (max-width: 500px) {
+@media (max-width: 500px), (max-width: 800px), (max-width: 600px) {
   header .header-bottom .mockup {
     width: 100%;
   }
@@ -443,9 +477,9 @@ header .header-bottom .mockup {
 header .header-bottom .intro-text {
   width: 40%;
 }
-@media (max-width: 500px) {
+@media (max-width: 500px), (max-width: 800px), (max-width: 600px) {
   header .header-bottom .intro-text {
-    width: 100%;
+    width: 80%;
     text-align: center;
   }
   header .header-bottom .intro-text h2 {
@@ -456,14 +490,17 @@ header .header-bottom .intro-text .buttons {
   display: flex;
   flex-direction: row;
   width: 80%;
+  margin: 0 auto;
   align-items: center;
   justify-content: space-between;
 }
-@media (max-width: 500px) {
+@media (max-width: 500px), (max-width: 800px), (max-width: 600px) {
   header .header-bottom .intro-text .buttons {
-    width: 100%;
-    justify-content: center;
+    width: 60%;
   }
+}
+header .menu-mobile {
+  display: none;
 }
 header .menu-mobile .drawer-overlay {
   background-color: #212529;
@@ -556,6 +593,11 @@ footer .footer .icons {
 footer .footer .icons li {
   padding-right: 2rem;
 }
+@media (max-width: 800px), (max-width: 600px) {
+  footer .footer .icons li {
+    padding-right: 1rem;
+  }
+}
 footer .footer .icons .fab:hover {
   color: #f4b643;
 }
@@ -567,7 +609,7 @@ footer a:hover {
   text-align: center;
 }
 #features {
-  padding: 3rem 0;
+  padding: 2rem 0;
 }
 #features .features-box {
   display: flex;
@@ -588,25 +630,7 @@ footer a:hover {
   text-align: center;
 }
 #howitworks {
-  padding: 3rem 0;
-  max-width: 1100px;
-  width: 100%;
-  margin: 0 auto;
-}
-@media (max-width: 800px) {
-  #howitworks {
-    max-width: 600px;
-  }
-}
-@media (max-width: 600px) {
-  #howitworks {
-    max-width: 500px;
-  }
-}
-@media (max-width: 500px) {
-  #howitworks {
-    max-width: 350px;
-  }
+  padding: 2rem 0;
 }
 #howitworks .hiw-box {
   display: flex;
@@ -659,7 +683,7 @@ footer a:hover {
   }
 }
 #team {
-  padding: 3rem 0;
+  padding: 2rem 0;
 }
 #team h4 {
   padding-top: 2rem;
@@ -708,4 +732,67 @@ footer a:hover {
 #team .team-box .team-member p {
   padding: 1.5rem;
   text-align: center;
+}
+#contact {
+  padding: 2rem 0;
+}
+form {
+  width: 60%;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+@media (max-width: 500px) {
+  form {
+    width: 90%;
+  }
+}
+.fields {
+  display: flex;
+  flex-direction: row;
+  line-height: 1.5;
+  font-size: 1.6rem;
+  font-weight: 600;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.fields .field {
+  display: flex;
+  flex-direction: column;
+}
+.fields .half {
+  width: 45%;
+  margin: 0 0 1.5rem 0;
+}
+@media (max-width: 500px) {
+  .fields .half {
+    width: 100%;
+  }
+}
+.fields .full {
+  width: 100%;
+  margin: 0 0 1.5rem 0;
+  justify-content: space-between;
+}
+.fields label {
+  width: fit-content;
+  text-transform: uppercase;
+}
+.fields input,
+.fields textarea {
+  width: 100%;
+  border-radius: 0.6rem;
+  font-size: 1.6rem;
+  padding: 1rem 0.5rem;
+  background-color: transparent;
+  border: 0.1rem solid #212529;
+}
+.fields input:focus,
+.fields textarea:focus {
+  outline: none;
+  border: 0.1rem solid #f4b643;
+}
+.fields input:placeholder-shown,
+.fields textarea:placeholder-shown {
+  font-size: 1.6rem;
 }
